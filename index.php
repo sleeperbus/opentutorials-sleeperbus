@@ -7,8 +7,7 @@ mysql_select_db('opentutorials');
 mysql_query('set session character_set_connection=utf8');
 mysql_query('set session character_set_results=utf8');
 mysql_query('set session character_set_client=utf8');
-if (!empty($GET['id'])) {
-	echo "12222";
+if (!empty($_GET['id'])) {
 	$sql="select * from topic where id = ".$_GET['id'];
 	$result = mysql_query($sql);
 	$topic = mysql_fetch_assoc($result);
